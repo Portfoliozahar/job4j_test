@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-public interface LibraryInterface {
+public interface OperationInterface {
 
     void displayLibrary(Library library);
 

@@ -5,7 +5,7 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-public class Operation implements LibraryInterface {
+public class Operation implements OperationInterface {
 
     @Override
 
