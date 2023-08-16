@@ -18,18 +18,18 @@ public class Library {
 
     public Library() {
         books = new ArrayList<>();
-        loadBooksFromCSV();
+        loadB();
     }
 
     public void addBook(Books book) {
         books.add(book);
-        saveBooksToCSV();
+        saveB();
     }
 
     public void removeBook(int index) {
         if (index >= 0 && index < books.size()) {
             books.remove(index);
-            saveBooksToCSV();
+            saveB();
         }
     }
 
@@ -38,7 +38,7 @@ public class Library {
     }
 
 
-    private void loadBooksFromCSV() {
+    private void loadB() {
         try {
             File file = new File(CSV_FILE_PATH);
             if (!file.exists()) {
@@ -72,7 +72,7 @@ public class Library {
 
 
 
-    void saveBooksToCSV() {
+    void saveB() {
         try (CSVWriter writer = (CSVWriter) new CSVWriterBuilder(new FileWriter(CSV_FILE_PATH)).withSeparator(';').build()) {
 
             String[] header = {"Title", "Author", "Year", "Page"};

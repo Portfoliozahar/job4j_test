@@ -9,7 +9,7 @@ public class Operation implements OperationInterface {
 
     @Override
 
-    public   void displayLibrary(Library library) {
+    public  void displayLibrary(Library library) {
         List<Books> books = library.getBooks();
         if (books.isEmpty()) {
             System.out.println("Библиотека пуста.");
@@ -53,7 +53,7 @@ public class Operation implements OperationInterface {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Ошибка: Введите корректное количество страниц.");
-                scanner.nextLine(); // Очищаем буфер после ошибки
+                scanner.nextLine();
             }
         }
 
@@ -126,7 +126,7 @@ public class Operation implements OperationInterface {
             book.setYear(newYear);
             book.setPageCount(newPageCount);
 
-            library.saveBooksToCSV();
+            library.saveB();
 
             System.out.println("Книга отредактирована успешно.");
         } else {
